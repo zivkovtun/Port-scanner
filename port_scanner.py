@@ -49,7 +49,6 @@ if correct.upper() == 'Y':
                 sys.exit()
             # Error handling
             except socket.gaierror as eg:
-                ####errLog.write("Error number: [%s]  %s\n" %(eg.errno,eg.strerror))
                 sys.stdout.write("Error number: [%s] %s\n" %(eg.errno,eg.strerror))
                 #logger Test messages
                 elog.error("Error number: [%s] %s\n" %(eg.errno,eg.strerror))
