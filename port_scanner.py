@@ -45,13 +45,12 @@ if correct.upper() == 'Y':
             except KeyboardInterrupt:
                 print("You pressed Ctrl+C")
                 sys.exit()
-            # Error handling
+
+            #Error handling
             except socket.gaierror as eg:
                 sys.stdout.write("Error number: [%s] %s\n" %(eg.errno,eg.strerror))
                 #logger Test messages
                 elog.error("Error number: [%s] %s\n" %(eg.errno,eg.strerror))
-
-
 
             except socket.error as er:
                 sys.stdout.write("Error number: [%s] %s\n" % (er.errno, er.strerror))
